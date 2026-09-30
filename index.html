@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sistema de gestión de transmisiones de SixSeven" />
+
+    <!--
+      El nombre visible del sistema es "Transmisiones" (asunción G6).
+      El favicon se define en index.html y no con una etiqueta <link> a un archivo
+      externo, para no depender de otro recurso que pueda no cargar.
+    -->
+    <title>Transmisiones</title>
+
+    <style>
+      /*
+        Se pinta el fondo antes de que React monte, para que en pantallas lentas no
+        se vea el destello blanco de fondo de pantalla y después el fondo gris del
+        sistema. Es un detalle pequeño que se nota mucho.
+      */
+      html,
+      body,
+      #root {
+        height: 100%;
+        margin: 0;
+        background-color: #f5f7fa;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
